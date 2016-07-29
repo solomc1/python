@@ -1,0 +1,2 @@
+def f(x:[int, str, [], dict]): pass
+print(type(f.__annotations__['x'][0]))

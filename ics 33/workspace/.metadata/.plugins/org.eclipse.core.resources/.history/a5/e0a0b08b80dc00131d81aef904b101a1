@@ -1,0 +1,2 @@
+def f(x:[int, str, []dfdkf]): pass
+print(f.__annotations__['x'])

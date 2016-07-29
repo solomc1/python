@@ -1,0 +1,199 @@
+				Inheritance II
+
+This short lecture extends our discussion of inheritance from single-inheritance
+to multiple-inheritance: we will learn how to visualize multiple-inheritance
+relationships (not as a N-ary tree, but as a more complicated network) and how
+to generalize the rules Python uses for locating attributes. We can use the
+inheritancetool.py module, along with any classes forming an inheritance
+hierarchy, to see how Python locates such attributes. We can use this tool with
+the module defining the Counter/Modular_Counter classes, and with the
+inheritancesample.py module, which defines a more complicated hierarchy
+discussed below..
+
+------------------------------------------------------------------------------
+
+Visualizing Multiple-Inheritance Hierarchies
+
+Examine the class structure below, which we have simplified by showing just
+the class statement with a body of pass.
+
+class B2a     : pass	    # object is the base class of B2a
+class B2(B2a) : pass	    # B2a is the base class of B2
+class B1      : pass	    # object is the base class B1
+class D(B1,B2): pass	    # B1 and B2 (in that order) are the base classs of D
+
+We can visualize the relationship betweeen the derived and base classes using
+the same building blocks we used for single-inheritance: a derived class refers
+upward to its direct base class. The left and right pictures are logically
+equivalent: the location of the class B1 is different, but in both cases B1 is
+the first/left base class from which D is derived, and B1 itself is derived
+from the base class object.
+
+        object			        object
+        ^    ^                          ^    ^
+       /      \		               /      \
+      B1      B2a		       |     B2a
+      ^        ^                       |      ^
+       \       |		       |      |
+        \     B2		       B1    B2
+         \     ^                       ^      ^
+          \   /			        \    /
+            D                              D
+
+Because of the extra complexity of multiple-inheritance, the relationships can
+form a complex network that cannot be captured by a simple N-ary tree: for
+example above D has two paths to the root.
+
+For a reason described in the next section, we will prefer the RIGHT
+visualization: it better represents the rules for locating attributes.
+
+To draw these inheritance networks, we start at the most derived class, and
+then draw all its base classes  (in the order they appear in the class
+definition, left to right), directly above the class derived from them, with
+arrows leading from the derived class to the base class. For the example above,
+because B2 is derived from B2a, and B2a is derived from object, B2a appears
+directly above B2 and object appears directly above B2a. This drawing procedure
+results in a longer arrow going from B1 to object (its base class).
+
+These networks can get messy to visualize, with more complicated relationships
+among the classes, but the picture layout is not important: what is important
+is the logical base/derived relationships, which are directly used to locate
+attributes.
+
+
+------------------------------------------------------------------------------
+
+Locating Attributes in Multiple-Inheritance Hierarchies
+
+The rules Python uses for locating an attribute in an inheritance hierarchy is
+now easy to state (if you understand the concept of breadth-first search,
+discussed in the second trees lecture, although applied here to networks).
+
+  Python first tries to find the attribute in the instance object; if Python
+  fails, it performs a breadth_first search (left before right) from the class
+  the object was constructed from (at the bottom of the network) upward towards
+  the root/object class.
+
+In the inheritance network above, if o is an object constructed from class D,
+and the attributes isn't found in o, Python searches the following classes in
+following (breadth-first) order: D, B1, B2, object, B2a, object. Note that
+object (the base class of B1) is examined before B2a, and unlike breadth-first
+traversals in an N-ary tree, the same node (object) can be reached multiple
+times in a network. We will implement the breadth-first traversal so that every
+class object is examined only once.
+
+How does the breadth-first search know how to go from a derived class to its
+base class(es)? Every class object has a __bases__ attribute that is a list
+of its base classes; the order that it uses for the base classes is the order
+the base classes appear in the class definition. So, the arrows shown in the
+pictures above are really stored in Python class objects in the list named
+__bases__.
+
+Finally, when applied to a single-inheritance hierarchy, this algorithm
+degenerates (each  __bases__ list has only one value in it) into looking from a
+derived class to its single base class, to the single base class of that base
+class, etc. until reaching the object class.
+
+Here is a function that locates the value associated with an attribute in
+an_object. It locates the attribute in an_object itself, or does a breadth-first
+search of its inheritance hierarchy starting with the class from which an_object
+is constructed. The inheritancetool.py module includes similar code in its
+where_is function: it uses the same traverse_hierarchy helper function, but
+printing information about the traversal. 
+
+def attribute_value(an_object, attribute):
+    
+    # generator for breadth-first traversal of inheritance hierarchy
+    #   of classes, starting at derived_class
+    def traverse_hierarchy(derived_class):
+        to_try             = [derived_class] # starting class
+        ever_put_on_to_try = {derived_class} # ditto
+        
+        while to_try != []:
+            class_obj = to_try.pop(0)
+            yield class_obj
+            # augment list with all base classes of class_obj
+            #   that have not already been put on to_try
+            for c in class_obj.__bases__:
+                if c not in ever_put_on_to_try:
+                    to_try.append(c)
+                    ever_put_on_to_try.add(c)
+        
+    # Try to locate attribute it in object itself,
+    #   otherwise try in the inheritance hierarchy
+    #   starting at the class it was constructed from
+    if attribute in an_object.__dict__:
+        return an_object.__dict__[attribute]
+    else:
+        for c in traverse_hierarchy(type(an_object)):
+            if attribute in c.__dict__:
+                return c.__dict__[attribute]
+    raise AttributeError("'"+type_as_str(an_object)+"' object has no attribute '"+attribute+"'")
+
+In fact, there is a function from Python's builtins module that performs
+exactly this kind of attribute searching. It is called getattr: its first
+argument is an object and the second is a string naming an attribute. It either
+returns the object bound to the attribute or raises AttributeError. It is a bit
+more complicated than attribute_value because it works with some Python features
+we have not discussed.
+
+Finally, in the next lecture we will see simple examples of single-inheritance
+and multiple-inheritance. As of the end of this lecture, you should be able to
+understand how Python treats all inheritance hierarchies.
+
+------------------------------------------------------------------------------
+
+The true meaning of the isinstance function (given inheritance)
+
+Python's boolean function isinstance has two parameters: the first should be
+bound to an instance object; the second to a class object. Before inheritance,
+our understanding of the call isinstance(o,C) meant return True if instance
+object o was constructed from class object C: we can restate this computation
+using the is operator as equivalent to: type(o) is C.
+
+But now that we know about inheritance we can clarify the the meaning of the
+isinstance function: it is a bit more general. The isinstance(o,C) function call
+still returns True if type(o) is C, but it also returns True if type(o) is any
+class derived from C (meaning type(o) is derived from class C in one or more
+steps). Stated another way, if isinstance(o,C) is Ture, it means that when
+searching for attributes in o, eventually class C will be searched, by the
+Fundamental Equation of Object-Oriented Programming generalized in this lecture.
+
+So, while type(o) is C truly asks whether o is an instance object constructed
+from class C, isinstance(o,C) is asking whether C will be searched when trying
+to find attributes in o. In the following picture isinstance(o,C) is True.
+
+               C
+               ^
+               |
+.....other Base Classes of type(o).....
+               ^
+               |
+   type(o): actual class of o
+
+A very interesting fact is that if isinstance(o,C) is True and if a is an
+attribute defined in class C, then writing o.a will always find a binding for
+the attribute a (and never raise AttributeError): the binding will either come
+from C itself (if the search goes all the way back to C) or from some class
+derived from C that redefines/overrides this attribute.
+
+------------------------------------------------------------------------------
+
+1) Given the following class definitions, draw the inheritance network and
+indicate in what order the class objects are searched for attributes.
+
+class A: pass
+class C       : pass
+class B(A,C)  : pass
+class D(A)    : pass
+class E(B,C)  : pass
+class F(C)    : pass
+class G(D,E,F): pass
+
+2) Rewrite the attribute_value function to return a list (empty, one value, or
+multiple values) that contains all the values found in the inheritance
+hierarchy of the given attribute name.
+
+3) For what second argument will isinstance always return True not matter what
+the first argument?
+

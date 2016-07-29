@@ -1,0 +1,53 @@
+-- VERSION_4
+-- START DISKCACHE
+C:\Users\Solomon Chan\Dropbox\python\ics 33\workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\q6\com.python.pydev.analysis\v2_indexcache
+q6solution|1400552569000|C:\Users\Solomon Chan\Dropbox\python\ics 33\workspace\q6\q6solution.py
+-- END DISKCACHE
+-- START DICTIONARY
+11
+11=LN.__init__
+3=LN
+4=Counter
+6=Modular_Counter.__init__
+5=Modular_Counter
+8=Counter.reset
+10=TN.__init__
+1=q6solution
+2=TN
+7=Counter.__init__
+9=Dumpable
+-- END DICTIONARY
+-- START TREE 1
+9
+LN|1|LN!9@
+TN|1|TN!9@
+add|2|add_all!10@add!10@
+cou|2|Counter!9@count!10@
+dum|1|Dumpable!9@
+equ|1|equal!10@
+lis|1|list_to_ll!10@
+min|1|min_max!10@
+mod|1|Modular_Counter!9@
+-- END TREE
+-- START TREE 2
+19
+__i|4|__init__!2&10@__init__!3&10@__init__!4&10@__init__!5&10@
+__s|2|__str__!4&10@__str__!5&10@
+_mo|1|_modulus!6&11@
+_va|2|_value!7&11@_value!8&11@
+a|1|a!5&11@
+b|1|b!5&11@
+c|1|c!5&11@
+d|1|d!5&11@
+e|1|e!5&11@
+get|1|get_state!9&10@
+inc|2|inc!4&10@inc!5&10@
+lef|1|left!10&11@
+mc|1|mc!5&11@
+mod|1|modulus_of!5&10@
+nex|1|next!11&11@
+res|1|reset!4&10@
+rig|1|right!10&11@
+t|1|t!5&11@
+val|4|values!5&11@value_of!4&10@value!10&11@value!11&11@
+-- END TREE

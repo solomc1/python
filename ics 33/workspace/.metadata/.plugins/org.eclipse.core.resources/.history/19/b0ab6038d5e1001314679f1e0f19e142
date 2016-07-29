@@ -1,0 +1,6 @@
+class C:
+    def __getattr__(self,attr):
+        print('No')
+        
+o = C()
+o.k

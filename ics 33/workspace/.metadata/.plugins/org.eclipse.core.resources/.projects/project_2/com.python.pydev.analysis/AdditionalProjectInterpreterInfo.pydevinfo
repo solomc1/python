@@ -1,0 +1,55 @@
+-- VERSION_4
+-- START DISKCACHE
+/Users/Solomon/Dropbox/python/ics 33/workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/project_2/com.python.pydev.analysis/v2_indexcache
+interval|1400608617000|/Users/Solomon/Dropbox/python/ics 33/workspace/project_2/interval.py
+bag|1400608617000|/Users/Solomon/Dropbox/python/ics 33/workspace/project_2/bag.py
+generator|1400608617000|/Users/Solomon/Dropbox/python/ics 33/workspace/project_2/generator.py
+-- END DISKCACHE
+-- START DICTIONARY
+7
+5=Bag
+4=Interval
+3=interval
+2=bag
+6=Bag.__init__
+1=generator
+7=Interval.__init__
+-- END DICTIONARY
+-- START TREE 1
+7
+alt|1|alternate!10@
+bag|1|Bag!17@
+int|1|Interval!25@
+n_w|1|n_with_pad!10@
+run|1|running_count!10@
+seq|1|sequence!10@
+tra|1|transform!10@
+-- END TREE
+-- START TREE 2
+25
+__a|2|__abs__!4&26@__add__!4&26@
+__b|1|__bool__!4&26@
+__c|1|__contains__!5&18@
+__e|2|__eq__!4&26@__eq__!5&18@
+__g|2|__ge__!4&26@__gt__!4&26@
+__i|3|__iter__!5&18@__init__!4&26@__init__!5&18@
+__l|3|__le__!4&26@__len__!5&18@__lt__!4&26@
+__m|1|__mul__!4&26@
+__n|1|__neg__!4&26@
+__p|2|__pos__!4&26@__pow__!4&26@
+__r|6|__rtruediv__!4&26@__rmul__!4&26@__rsub__!4&26@__repr__!5&18@__repr__!4&26@__radd__!4&26@
+__s|4|__str__!5&18@__sub__!4&26@__str__!4&26@__setattr__!4&26@
+__t|1|__truediv__!4&26@
+add|1|add!5&18@
+bag|1|bag!6&19@
+bes|1|best!4&26@
+cou|1|count!5&18@
+err|1|error!4&26@
+max|1|max!7&27@
+mid|1|mid_err!4&26@
+min|2|min!7&27@min_max!4&26@
+rel|1|relative_error!4&26@
+rem|1|remove!5&18@
+sqr|1|sqrt!4&26@
+uni|1|unique!5&18@
+-- END TREE

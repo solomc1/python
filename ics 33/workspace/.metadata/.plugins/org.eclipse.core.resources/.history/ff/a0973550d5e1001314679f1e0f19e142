@@ -1,0 +1,8 @@
+class C:
+    def __init__(self):
+        self.x = []
+    def __getattr__(self,attr):
+        print('No')
+        
+o = C()
+o.x

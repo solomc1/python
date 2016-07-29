@@ -1,0 +1,70 @@
+-- VERSION_4
+-- START DISKCACHE
+/Users/Solomon/Dropbox/python/ics 33/workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/q8helper/com.python.pydev.analysis/v2_indexcache
+performance|1369928862000|/Users/Solomon/Dropbox/python/ics 33/workspace/q8helper/performance.py
+bag|1370012284000|/Users/Solomon/Dropbox/python/ics 33/workspace/q8helper/bag.py
+special_old.__init__|1401939933000|/Users/Solomon/Dropbox/python/ics 33/workspace/q8helper/special_old/__init__.py
+q81solution|1401668440000|/Users/Solomon/Dropbox/python/ics 33/workspace/q8helper/q81solution.py
+special_old.special_old|1401939924000|/Users/Solomon/Dropbox/python/ics 33/workspace/q8helper/special_old/special_old.py
+q82solution|1401855565000|/Users/Solomon/Dropbox/python/ics 33/workspace/q8helper/q82solution.py
+-- END DISKCACHE
+-- START DICTIONARY
+18
+6=Bag
+9=Special
+1=bag
+8=Chain_Link
+11=Performance.__init__
+15=Special.__init__
+10=Chain_Parent
+3=q81solution
+2=special_old.special_old
+12=Performance.evaluate
+13=Test_Bag.setUp
+18=Test_Bag
+14=Chain_Link.__init__
+4=performance
+16=Bag.__init__
+7=Performance
+5=q82solution
+17=Special.update
+-- END DICTIONARY
+-- START TREE 1
+7
+bag|1|Bag!9@
+cha|2|Chain_Parent!17@Chain_Link!17@
+cod|1|code!26@
+per|1|Performance!33@
+set|1|setup!26@
+spe|1|Special!17@
+tes|1|Test_Bag!41@
+-- END TREE
+-- START TREE 2
+26
+__c|1|__contains__!6&10@
+__e|1|__eq__!6&10@
+__i|5|__init__!7&34@__init__!8&18@__init__!9&18@__iter__!6&10@__init__!6&10@
+__l|1|__len__!6&10@
+__r|1|__repr__!6&10@
+__s|4|__str__!6&10@__str__!8&18@__str__!9&18@__str__!10&18@
+_co|1|_code!11&35@
+_ev|2|_evaluate_results!12&35@_evaluate_results!11&35@
+_ge|1|_gen!6&10@
+_se|1|_setup!11&35@
+_ti|2|_times!11&35@_title!11&35@
+add|1|add!6&10@
+ali|1|alist!13&43@
+ana|1|analyze!7&34@
+bag|1|bag!13&43@
+cod|1|code!7&34@
+col|2|color!14&19@color!15&19@
+cou|2|count!6&10@counts!16&11@
+end|2|end_of_chain!17&19@end_of_chain!15&19@
+eva|1|evaluate!7&34@
+nex|2|next!14&19@next!10&19@
+rem|1|remove!6&10@
+set|2|setUp!18&42@setup!7&34@
+tes|7|test_eq!18&42@test_len!18&42@test_count!18&42@test_unique!18&42@test_add!18&42@test_remove!18&42@test_contains!18&42@
+uni|1|unique!6&10@
+upd|2|update!8&18@update!9&18@
+-- END TREE

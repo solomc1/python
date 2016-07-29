@@ -1,0 +1,66 @@
+-- VERSION_4
+-- START DISKCACHE
+/Users/Solomon/Dropbox/python/ics 33/workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/program4/com.python.pydev.analysis/v2_indexcache
+test|1400749036000|/Users/Solomon/Dropbox/python/ics 33/workspace/program4/test.py
+bag|1384110042000|/Users/Solomon/Dropbox/python/ics 33/workspace/program4/bag.py
+driver|1384032890000|/Users/Solomon/Dropbox/python/ics 33/workspace/program4/driver.py
+checkannotation|1401098840000|/Users/Solomon/Dropbox/python/ics 33/workspace/program4/checkannotation.py
+test2|1400779215000|/Users/Solomon/Dropbox/python/ics 33/workspace/program4/test2.py
+-- END DISKCACHE
+-- START DICTIONARY
+18
+7=Bag
+8=Check_Any_OK
+17=Bookshelf.__init__
+16=Double_Number.__init__
+4=test
+2=bag
+12=C
+5=checkannotation
+1=test2
+13=Check_Any_OK.__init__
+10=Double_Number
+11=Bookshelf
+15=Check_Annotation.__init__
+14=Check_All_OK.__init__
+9=Check_All_OK
+18=Bag.__init__
+3=driver
+6=Check_Annotation
+-- END DICTIONARY
+-- START TREE 1
+11
+C|1|C!9@
+bag|1|Bag!17@
+bat|2|batch_self_check!26@batch_test!26@
+boo|1|Bookshelf!33@
+che|3|Check_Annotation!41@Check_Any_OK!41@Check_All_OK!41@
+def|7|default_show_all!27@default_show_comment!27@default_show_exception!27@default_separator!27@default_file_name!27@default_show_exception_message!27@default_show_traceback!27@
+dou|1|Double_Number!33@
+dri|1|driver!26@
+my_|1|my_double_number!35@
+num|1|num_just!26@
+o|1|o!11@
+-- END TREE
+-- START TREE 2
+19
+__c|7|__call__!6&42@__check_annotation__!7&18@__contains__!7&18@__check_annotation__!8&42@__check_annotation__!9&42@__call__!10&34@__contains__!11&34@
+__e|1|__eq__!7&18@
+__g|3|__getitem__!11&34@__getattr__!11&34@__getattr__!12&10@
+__i|8|__iter__!7&18@__iter__!11&34@__init__!6&42@__init__!8&42@__init__!9&42@__init__!7&18@__init__!10&34@__init__!11&34@
+__l|1|__len__!7&18@
+__r|4|__repr__!8&42@__repr__!9&42@__repr__!7&18@__repr__!11&34@
+__s|4|__setitem__!11&34@__str__!7&18@__str__!11&34@__setattr__!11&34@
+_an|2|_annotations!13&43@_annotations!14&43@
+_f|1|_f!15&43@
+_ge|1|_gen!7&18@
+add|2|add!7&18@add!11&34@
+ans|1|answer!16&35@
+bot|1|bottom!17&35@
+che|3|checking_on!15&43@checking_on!6&43@check!6&42@
+cou|2|count!7&18@counts!18&19@
+mid|1|middle!17&35@
+rem|1|remove!7&18@
+top|1|top!17&35@
+uni|1|unique!7&18@
+-- END TREE

@@ -1,0 +1,56 @@
+-- VERSION_4
+-- START DISKCACHE
+/Users/Solomon/Dropbox/python/ics 33/workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/lecture/com.python.pydev.analysis/v2_indexcache
+423_stop_iteration|1398303057000|/Users/Solomon/Dropbox/python/ics 33/workspace/lecture/src/423_stop_iteration.py
+4_25_iterators_generator|1398752458000|/Users/Solomon/Dropbox/python/ics 33/workspace/lecture/src/4_25_iterators_generator.py
+linked_list|1399436120000|/Users/Solomon/Dropbox/python/ics 33/workspace/lecture/src/linked_list.py
+recursion|1398719115000|/Users/Solomon/Dropbox/python/ics 33/workspace/lecture/src/recursion.py
+-- END DISKCACHE
+-- START DICTIONARY
+16
+2=423_stop_iteration
+3=4_25_iterators_generator
+14=prange_iter.__init__
+4=psorted
+5=LN
+6=prange_iter
+10=prange_iter.Percent_Historgram.__init__
+7=Repeat.Repeat_iter
+12=Repeat.Repeat_iter.__next__
+13=Repeat.__init__
+9=prange_iter.Percent_Historgram
+16=psorted.__init__
+1=linked_list
+11=Repeat.Repeat_iter.__init__
+15=LN.__init__
+8=Repeat
+-- END DICTIONARY
+-- START TREE 1
+7
+LN|1|LN!9@
+__i|1|__iter__!18@
+_ge|1|_gen!26@
+all|1|all_pair!18@
+pra|1|prange_iter!17@
+pso|1|psorted!25@
+rep|2|repeat!26@Repeat!25@
+-- END TREE
+-- START TREE 2
+16
+__i|9|__inter__!4&26@__init__!5&10@__iter__!6&18@__init__!4&26@__init__!7&26@__init__!8&26@__init__!9&18@__init__!6&18@__iter__!8&26@
+__n|2|__next__!6&18@__next__!7&26@
+_ta|1|_tally!9&18@
+cle|1|clear!9&18@
+def|1|def!9&18@
+his|1|historgram!10&19@
+ite|5|iteraable!11&27@iter_skip!6&18@iterator!12&27@iterator!11&27@iterable!13&27@
+max|2|max_times!13&27@max_times_left!11&27@
+n|1|n!14&19@
+nex|1|next!15&11@
+per|1|Percent_Historgram!6&17@
+rep|1|Repeat_iter!8&25@
+res|1|result!16&27@
+ste|1|step!14&19@
+sto|1|stop!14&19@
+val|1|value!15&11@
+-- END TREE

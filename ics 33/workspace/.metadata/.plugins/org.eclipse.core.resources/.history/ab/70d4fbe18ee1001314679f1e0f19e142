@@ -1,0 +1,100 @@
+# class Bookshelf:
+#     def __init__(self):
+#         self.top = []
+#         self.middle = []
+#         self.bottom = []
+#         
+#     def add(self, shelf_number, thing):
+#         if not(0< shelf_number <4):
+#             raise AssertionError
+#         if shelf_number ==1:
+#             if len(self.top) == 3:
+#                 raise AssertionError("Top shelf is full already")
+#             self.top.append(thing)
+#         elif shelf_number ==2:
+#             if len(self.top) == 3:
+#                 raise AssertionError("Middle shelf is full already")
+#             self.middle.append(thing)
+#         if shelf_number ==3:
+#             if len(self.top) == 3:
+#                 raise AssertionError("Bottom shelf is full already")
+#             self.bottom.append(thing)
+#         print(str(self))
+#         
+#     def __str__(self):
+#         return "Top Shelf :{}, Middle Shelf:{}, Bottom Shelf: {}".format(self.top, self.middle, self.bottom)
+#     
+#     def __repr__(self):
+#         return 'BookShelf(' +self.top+self.middle+self.bottom+")"
+#     
+#     def __contains__(self, thing):
+#         return (thing in self.top) or (thing in self.middle) or (thing in self.bottom)
+#     
+#     def __iter__(self):
+#         def _loop(iterable):
+#             for item in iterable:
+#                 yield item
+#         return _loop(self.top, self.middle, self.bottom)
+#     
+#     def __getitem__(self,index):
+#         if type(index) != int:
+#             raise TypeError("Bookshelf.__getitem__ index must be an integer between 1 and 3 Bad value:"+ index)
+#         if not(0<index<4):
+#             raise AssertionError("Bookshelf.__getitem__ must be an integer between 1 and 3. Bad value:"+ index)
+#         if index == 1:
+#             return self.top
+#         if index == 2:
+#             return self.middle
+#         if index == 3:
+#             return self.bottom
+#         
+#     def __setitem__(self, index, value):
+#         raise AssertionError("Do not mess with the shelves")
+#     
+#     def __getattr__(self, name):
+#         raise AssertionError("Accessing invalid values")
+#     
+#     def __setattr__(self, name, value):
+#         if name not in self.__dict__ and name in ("top", 'middle','bottom'):
+#             self.__dict__[name] = value
+#         else:
+#             raise AssertionError("Cannot modify contents of bookshelf")
+#     
+# __call__ method code example
+ 
+# The __call__ method, when overloaded in a class, allows that instances of that class
+# to act like a function.
+ 
+# Example:
+ 
+class Double_Number:
+    def __init__(self, num):
+        self.answer = num * 2
+ 
+ 
+# This class, Double_Number, takes in a number and stores double of that number
+# as the attribute 'answer' of that class.
+ 
+my_double_number = Double_Number(5) # Creates a Double_Number object
+ 
+# Suppose I want to be able to have my_double_number act like a function.
+# What I mean by that is that I want to be able to say the following:
+# my_double_number(10)
+# That definitely looks like a function call to me. We can do that by 
+# overloading the __call__ operator!
+ 
+class Double_Number:
+    def __init__(self, num):
+        self.answer = num * 2
+ 
+    def __call__(self, num):
+        return num * 2
+ 
+my_double_number = Double_Number(3)
+ 
+print(my_double_number(10)) # What will this print out? Run it and see!
+#             
+#     
+#      
+#     
+#         

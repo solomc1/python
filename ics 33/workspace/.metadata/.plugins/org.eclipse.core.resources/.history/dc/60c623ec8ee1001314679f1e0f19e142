@@ -1,0 +1,33 @@
+
+ 
+class Double_Number:
+    def __init__(self, num):
+        self.answer = num * 2
+ 
+ 
+# This class, Double_Number, takes in a number and stores double of that number
+# as the attribute 'answer' of that class.
+ 
+my_double_number = Double_Number(5) # Creates a Double_Number object
+ 
+# Suppose I want to be able to have my_double_number act like a function.
+# What I mean by that is that I want to be able to say the following:
+# my_double_number(10)
+# That definitely looks like a function call to me. We can do that by 
+# overloading the __call__ operator!
+ 
+class Double_Number:
+    def __init__(self, num):
+        self.answer = num * 2
+ 
+    def __call__(self, num):
+        return num * 2
+ 
+my_double_number = Double_Number(3)
+ 
+print(my_double_number(10)) # What will this print out? Run it and see!
+#             
+#     
+#      
+#     
+#         

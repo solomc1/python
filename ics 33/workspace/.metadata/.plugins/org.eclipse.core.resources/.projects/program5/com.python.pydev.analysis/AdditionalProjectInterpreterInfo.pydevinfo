@@ -1,0 +1,115 @@
+-- VERSION_4
+-- START DISKCACHE
+/Users/Solomon/Dropbox/python/ics 33/workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/program5/com.python.pydev.analysis/v2_indexcache
+ball|1401869743000|/Users/Solomon/Dropbox/python/ics 33/workspace/program5/ball.py
+mobilesimulton|1369436730000|/Users/Solomon/Dropbox/python/ics 33/workspace/program5/mobilesimulton.py
+model|1401869980000|/Users/Solomon/Dropbox/python/ics 33/workspace/program5/model.py
+prey|1401869743000|/Users/Solomon/Dropbox/python/ics 33/workspace/program5/prey.py
+circle|1401938857000|/Users/Solomon/Dropbox/python/ics 33/workspace/program5/circle.py
+script|1368898360000|/Users/Solomon/Dropbox/python/ics 33/workspace/program5/script.py
+hunter|1401916390000|/Users/Solomon/Dropbox/python/ics 33/workspace/program5/hunter.py
+pulsator|1401869743000|/Users/Solomon/Dropbox/python/ics 33/workspace/program5/pulsator.py
+special|1401939888000|/Users/Solomon/Dropbox/python/ics 33/workspace/program5/special.py
+view|1369148338000|/Users/Solomon/Dropbox/python/ics 33/workspace/program5/view.py
+controller|1401390065000|/Users/Solomon/Dropbox/python/ics 33/workspace/program5/controller.py
+blackhole|1401856273000|/Users/Solomon/Dropbox/python/ics 33/workspace/program5/blackhole.py
+simulton|1401844238000|/Users/Solomon/Dropbox/python/ics 33/workspace/program5/simulton.py
+floater|1401869743000|/Users/Solomon/Dropbox/python/ics 33/workspace/program5/floater.py
+-- END DISKCACHE
+-- START DICTIONARY
+34
+8=mobilesimulton
+1=model
+18=Special
+4=circle
+21=Black_Hole
+27=Mobile_Simulton.__init__
+26=Mobile_Simulton.set_angle
+28=Simulton.set_dimension
+20=Circle
+23=Prey
+15=Mobile_Simulton
+22=Ball
+2=ball
+19=Floater
+29=Mobile_Simulton.set_speed
+16=Hunter
+34=Pulsator.__init__
+32=Circle.__init__
+10=prey
+14=Simulton
+7=hunter
+25=Mobile_Simulton.randomize_angle
+30=Simulton.set_location
+11=pulsator
+24=Mobile_Simulton.bounce
+13=special
+9=controller
+6=view
+17=Pulsator
+33=Pulsator.update
+12=simulton
+3=blackhole
+31=Circle.randomize_color
+5=floater
+-- END DICTIONARY
+-- START TREE 1
+30
+add|1|add!10@
+bal|1|Ball!17@
+bla|1|Black_Hole!25@
+cir|1|Circle!33@
+cyc|1|cycle_count!11@
+dis|1|display_all!10@
+fin|1|find!10@
+flo|1|Floater!41@
+fra|1|frame!51@
+hun|1|Hunter!57@
+mob|1|Mobile_Simulton!65@
+mou|1|mouse_click!10@
+obj|1|object_button!74@
+pre|1|Prey!81@
+pro|1|progress!74@
+pul|1|Pulsator!89@
+rem|2|remove_all!10@remove!10@
+rep|1|repeater!74@
+res|2|reset!10@reset_button!74@
+roo|1|root!51@
+run|1|running!11@
+sel|2|selected_object!11@select_object!10@
+sim|2|Simulton!97@simulation_canvas!74@
+spe|1|Special!105@
+sta|2|start!10@start_button!74@
+ste|2|step_button!74@step!10@
+sto|2|stop!10@stop_button!74@
+the|2|the_canvas!75@the_progress!75@
+upd|1|update_all!10@
+wor|2|world!10@world_objects!11@
+-- END TREE
+-- START TREE 2
+24
+__i|10|__init__!14&98@__init__!15&66@__init__!16&58@__init__!17&90@__init__!18&106@__init__!19&42@__init__!20&34@__init__!21&26@__init__!22&18@__init__!23&82@
+__s|6|__str__!18&106@__str__!17&90@__str__!19&42@__str__!21&26@__str__!22&18@__str__!16&58@
+_an|4|_angle!24&67@_angle!25&67@_angle!26&67@_angle!27&67@
+_he|1|_height!28&99@
+_sp|2|_speed!29&67@_speed!27&67@
+_wi|1|_width!28&99@
+_x|1|_x!30&99@
+_y|1|_y!30&99@
+bou|1|bounce!15&66@
+cha|2|change_location!14&98@change_dimension!14&98@
+col|2|color!31&35@color!32&35@
+con|2|contains!14&98@contains!21&26@
+cou|2|counter!33&91@counter!34&91@
+dis|2|display!20&34@distance!14&98@
+get|4|get_dimension!14&98@get_angle!15&66@get_location!14&98@get_speed!15&66@
+mov|1|move!15&66@
+rad|1|radius!32&35@
+ran|3|randomize_angle!15&66@randomize_color!20&34@random_color!20&34@
+set|5|set_dimension!14&98@set_speed!15&66@set_velocity!15&66@set_location!14&98@set_angle!15&66@
+spe|1|speed!16&59@
+tim|1|timer!17&91@
+upd|6|update!22&18@update!17&90@update!16&58@update!21&26@update!18&106@update!19&42@
+vis|1|vision_range!16&59@
+wal|1|wall_bounce!15&66@
+-- END TREE

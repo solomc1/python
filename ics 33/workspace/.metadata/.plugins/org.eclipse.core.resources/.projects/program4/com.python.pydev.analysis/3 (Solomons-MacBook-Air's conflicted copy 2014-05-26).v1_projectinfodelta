@@ -1,0 +1,24 @@
+INSTUPtest
+/Users/Solomon/Dropbox/python/ics 33/workspace/program4/test.py
+INFOS:&&1|1|2|0&&2|3|2|1&&3|4|2|5&&3|6|2|5&&3|7|2|5&&2|8|2|1&&2|9|2|1&&2|10|2|1&&2|11|2|1&&2|12|2|1&&2|13|2|1&&2|14|2|1&&2|15|2|1&&2|16|2|1&&1|17|2|0&&2|3|2|17&&3|18|2|19&&3|20|2|0&&1|17|2|0&&2|3|2|17&&3|18|2|19&&2|21|2|17&&3|20|2|0
+__repr__=10
+Double_Number.__init__=19
+__setattr__=16
+Bookshelf.__init__=5
+__contains__=11
+__call__=21
+my_double_number=20
+test=2
+answer=18
+add=8
+__str__=9
+middle=6
+__setitem__=14
+Double_Number=17
+__init__=3
+Bookshelf=1
+__getattr__=15
+bottom=7
+__getitem__=13
+__iter__=12
+top=4
